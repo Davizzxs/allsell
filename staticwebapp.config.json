@@ -1,0 +1,16 @@
+{
+  "routes": [
+    { "route": "/config.js", "headers": { "cache-control": "no-cache" } },
+    { "route": "/index.html", "headers": { "cache-control": "no-cache" } }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/*.{css,js,png,jpg,jpeg,gif,svg,ico,webp,json}"]
+  },
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+  }
+}
